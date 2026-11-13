@@ -1,5 +1,14 @@
 # APT-C-06-Dark-Hotel-emulation-detection-report
 ## Introduction 
+In this scenario, I conducted a DFIR investigation of a compromised environment following DARKHOTEL (APT-C-06) attack. The group  known for targeting luxury business hotels through compromised login page.<br>
+The investigation involved analyzing  PCAP file, SPLUNK logs and windows registry artifacts.
+-	Performed a system profiling by identifying the computer name, timezone and the discovered users
+-	Correlated forensic artifacts from PCAP file, windows registry and SPLUNK logs across each phase of the attack to build a reliable picture of the incident through evidence from multiple sources
+-	Identified NIST 800-53 security control failures with the incident 
+-	Assessed security gap against NIST CSF 2.0 
+-	Wrote splunk detection rules to detect similar attacks and prevent future incidents 
+-	Mapped identified activities to MITRE ATT&CK with the corresponding timeline and supporting evidence 
+-	Identifying IOCs
 
 ## Executive Summury
 On 22/08/2026, the workstation host DESKTOP-2A1O8LD was the target of a cyberattack, which began at 10:18:31 UTC. The attacker tricked the host owner into running a fake ‘HotelWifi Portal Update’ software, which appeared trustworthy because it carried a legitimate looking digital approval to bypass security controls. Once executed, the malicious program stole credentials from memory, establishing long-term access, gathered and collected sensitive data to transfer to an unauthorized destination. Immediately block the attacker’s 192.168.67.128 at the firewall and  contain the compromised machine to prevent further spread across the network
